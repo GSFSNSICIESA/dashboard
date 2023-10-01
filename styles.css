@@ -37,7 +37,7 @@ main{
     box-shadow: black;
 }
 
-.content{
+.main-content{
     grid-area: main-content;
     background: #e2e8f0;
 }
@@ -156,4 +156,24 @@ p{
 
 .nav .child1{
     margin: 40px 0;
+}
+
+.main-content .meat div{
+    background-color: #fff;
+    border-left: 4px solid #f0b429;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 140px;
+    padding: 16px;
+
+}
+
+.main-content .meat{
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 160px 160px 160px;
+    gap: 20px;
+
 }
