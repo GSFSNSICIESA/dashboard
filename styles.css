@@ -8,14 +8,14 @@
 main{
     display: grid;
     height: 100vh;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
-    "sidebar head head head"
-    "sidebar main-content main-content main-content "
-    "sidebar main-content main-content main-content "
-    "sidebar main-content main-content main-content "
-    "sidebar main-content main-content main-content "
+    "sidebar head head head head"
+    "sidebar main-content main-content main-content main-content"
+    "sidebar main-content main-content main-content main-content"
+    "sidebar main-content main-content main-content main-content"
+    "sidebar main-content main-content main-content main-content"
     
     
     
@@ -57,7 +57,7 @@ main{
 
 .header{
     display: grid;
-    padding: 10px;
+    padding: 10px 20px;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto auto;
     grid-template-areas:
@@ -163,17 +163,39 @@ p{
     border-left: 4px solid #f0b429;
     border-radius: 8px;
     box-sizing: border-box;
-    width: 300px;
-    height: 140px;
     padding: 16px;
+    box-shadow: 10px 10px 30px rgb(0, 0, 0,0.1);
 
 }
 
 .main-content .meat{
     display: grid;
     margin: 20px;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 160px 160px 160px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(160px, 1fr));
     gap: 20px;
 
+}
+
+.main-content{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.salad > div > div{
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 4px 4px 8px;
+    background-color: #fff;
+}
+
+.salad .flexed{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.salad .flexed > img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
